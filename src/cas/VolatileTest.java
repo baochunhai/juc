@@ -6,12 +6,12 @@ import java.util.concurrent.CyclicBarrier;
 public class VolatileTest {
 
     public static void main(String[] args) {
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(1000);
-        for (int i = 0; i < 1000; i++) {
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(200000);
+        for (int i = 0; i < 100000000; i++) {
             new Thread(()->{
                 try {
                     cyclicBarrier.await();
-                    System.out.println(DCL.getInstance().hashCode());
+                    DCL.getInstance();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (BrokenBarrierException e) {

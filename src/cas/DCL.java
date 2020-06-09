@@ -10,6 +10,7 @@ public class DCL {
             Thread.yield();
             synchronized (DCL.class) {
                 if (INSTANCE == null) {
+                    System.out.println("执行");
                     INSTANCE = new DCL();
                 }
             }
