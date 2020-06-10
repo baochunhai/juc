@@ -3,6 +3,9 @@ package cas;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+/**
+ * @author Administrator
+ */
 public class VolatileTest {
 
     public static void main(String[] args) {

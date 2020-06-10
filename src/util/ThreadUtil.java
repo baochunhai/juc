@@ -1,5 +1,8 @@
 package util;
 
+/**
+ * @author Administrator
+ */
 public class ThreadUtil {
     private ThreadUtil(){
         throw new RuntimeException("Can not create this Class!");

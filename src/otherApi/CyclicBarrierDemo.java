@@ -8,6 +8,7 @@ import java.util.concurrent.CyclicBarrier;
  * CountDownLatch 是一次性的，CyclicBarrier 是可循环利用的
  * CountDownLatch 参与的线程的职责是不一样的，有的在倒计时，有的在等待倒计时结束。CyclicBarrier 参与的线程职责是一样的。
  * 可以用来多线程运算，并将结果合并
+ * @author Administrator
  */
 public class CyclicBarrierDemo {
 

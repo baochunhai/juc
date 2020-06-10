@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 信号量，可以限制并发访问的线程数
+ * @author Administrator
  */
 public class SemaphoreDemo {
     public static void main(String[] args) {

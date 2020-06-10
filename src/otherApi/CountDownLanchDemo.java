@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 门闩，控制指定数量线程到达后，才继续执行
+ * @author Administrator
  */
 public class CountDownLanchDemo {
     static void lanch(){

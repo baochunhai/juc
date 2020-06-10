@@ -2,6 +2,9 @@ package aThreadState;
 
 import util.ThreadUtil;
 
+/**
+ * @author Administrator
+ */
 public class ThreadState extends Thread{
     static int count = 0;
    static Object o = new Object();

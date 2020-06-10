@@ -8,6 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 可重入锁，sychronized是可重入的
  * ReetrantLock获得锁后必须手动释放锁
+ * @author Administrator
  */
 public class ReetrantLockDemo {
     Lock lock = new ReentrantLock();
