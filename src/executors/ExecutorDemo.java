@@ -19,6 +19,8 @@ public class ExecutorDemo {
 
     public static void main(String[] args) {
 
+
+
         System.out.println("开始执行任务");
         List<Future> list = new ArrayList<>();
         for (int i = 0; i < 2; i++) {

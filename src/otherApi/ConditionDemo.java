@@ -11,12 +11,13 @@ import java.util.concurrent.locks.ReentrantLock;
  * 要求打印结果A1,B2,C3,D4....Z26
  */
 public class ConditionDemo {
-   static String [] strings = new String[26];
-   static int [] nums = new int[26];
+    static String[] strings = new String[26];
+    static int[] nums = new int[26];
+
     static {
         for (int i = 0; i < strings.length; i++) {
-            strings[i] = Character.toString ((char)('A' + i));
-            nums[i] = i +1;
+            strings[i] = Character.toString((char) ('A' + i));
+            nums[i] = i + 1;
         }
     }
 
@@ -25,7 +26,7 @@ public class ConditionDemo {
         Condition condition = lock.newCondition();
         Condition condition1 = lock.newCondition();
 
-        new Thread(()->{
+        new Thread(() -> {
             for (int i = 0; i < strings.length; i++) {
                 lock.lock();
                 try {
@@ -34,23 +35,23 @@ public class ConditionDemo {
                     condition1.signal();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }finally {
+                } finally {
                     lock.unlock();
                 }
             }
 
         }).start();
-        new Thread(()->{
+        new Thread(() -> {
             for (int i = 0; i < nums.length; i++) {
                 lock.lock();
                 try {
                     condition.signal();
                     condition1.await();
-                    System.out.print(nums[i]+",");
+                    System.out.print(nums[i] + ",");
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }finally {
+                } finally {
                     lock.unlock();
                 }
             }
